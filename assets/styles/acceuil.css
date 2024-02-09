@@ -1,0 +1,83 @@
+/* Styles pour la barre de navigation */
+.navbar {
+    background: linear-gradient(to right, #000066, #000033); /* Dégradé bleu foncé */
+    overflow: hidden;
+    padding-: 10px 0; /* Espacement en haut et en bas de la barre */
+    display: flex; /* Utilisation de Flexbox pour aligner le contenu verticalement */
+    justify-content: space-between; /* Espacement automatique entre le logo et les boutons */
+    align-items: center; /* Centrage vertical du contenu */
+    margin-right:0px ;
+    border-bottom: 3px solid floralwhite ;
+    padding-bottom: 15px
+}
+
+/* Styles pour le logo à gauche */
+.navbar .logo {
+    /* Aucun style nécessaire pour le logo, car il est déjà centré verticalement */
+}
+
+/* Ajoutez ces styles pour définir la taille du logo plus gros et le bord arrondi */
+.navbar .logo img {
+    width: 100px; /* Largeur du logo augmentée */
+    height: auto; /* Hauteur automatique pour conserver les proportions */
+    border-radius: 50%; /* Bord arrondi pour le logo */
+    margin-left: 110px;
+}
+
+/* Styles pour les boutons de navigation */
+/* Styles pour les boutons de navigation */
+.navbar a {
+    font-family: Verdana, Arial, sans-serif;
+    margin-left: 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 10px; /* Espacement entre les boutons (ajustez selon vos préférences) */
+    font-size: 16px; /* Taille du texte augmentée */
+    height: 100%; /* Hauteur de 100% pour les boutons */
+    display: flex; /* Utilisez Flexbox pour centrer le contenu vertical */
+    align-items: center; /* Centrage vertical du contenu */
+    transition: transform 0.2s ease-in-out; /* Ajoutez une transition fluide */
+
+}
+
+.amigo{
+    font-family: Verdana, Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 22px; /* Taille du texte augmentée */
+    display: flex; /* Utilisez Flexbox pour centrer le contenu vertical */
+    align-items: center; /* Centrage vertical du contenu */
+    transition: transform 0.2s ease-in-out; /* Ajoutez une transition fluide */
+    margin-right: 20px;
+
+}
+
+/* Changement de couleur et d'échelle au survol des boutons */
+.navbar a:hover {
+
+    transform: scale(1.2); /* Augmentez la taille au survol (par exemple, 10 % de plus) */
+}
+
+/* Ajouter cette règle à votre fichier CSS */
+
+
+
+/* Styles pour les puces à droite */
+.navbar ul {
+    list-style-type: none; /* Suppression des puces par défaut */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block; /* Affichage en ligne des puces */
+    margin-left: 25px/* Espacement entre les puces (ajustez selon vos préférences) */
+}
+
+.navbar li:first-child {
+    margin-left: 0; /* Suppression de la marge à gauche pour le premier élément */
+}
+body{
+    background: linear-gradient(to right, #000066, #000033);
+}

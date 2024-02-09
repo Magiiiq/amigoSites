@@ -1,0 +1,51 @@
+/* Style général pour le conteneur de chaque membre du bureau */
+.bureau-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #FFF;
+    border: 1px solid #000;
+    max-width: 800px;
+    margin-left: 300px;
+    border-radius: 30px;
+}
+
+.bureau-info, .bureau-info a {
+    font-family: 'Arial', sans-serif; /* change la police, utilisez le nom de votre police préférée */
+}
+
+
+.bureau-card:nth-child(odd) .bureau-image {
+    order: 1; /* L'image est à droite pour les éléments impairs */
+}
+
+.bureau-card:nth-child(even) .bureau-image {
+    order: -1; /* L'image est à gauche pour les éléments pairs */
+}
+
+/* Style pour l'image */
+.bureau-image {
+    border-radius: 50%; /* Rend l'image ronde */
+    margin: 0 10px; /* Espacement autour de l'image */
+    max-width: 100px;
+}
+
+/* Style pour le contenu textuel */
+.bureau-info {
+    display: flex;
+    flex-direction: column; /* Disposition verticale des éléments */
+}
+
+.bureau-info a {
+    background-color: #0077b5; /* Couleur de fond pour le bouton LinkedIn */
+    color: white; /* Couleur du texte pour le bouton LinkedIn */
+    padding: 5px 10px;
+    border-radius: 5px; /* Bordure arrondie pour le bouton LinkedIn */
+    text-align: center;
+    margin-top: 5px; /* Espacement au-dessus du bouton LinkedIn */
+    text-decoration: none; /* Enlève le soulignement du lien */
+}
+
+/* Ajouter d'autres styles au besoin pour la typographie, etc. */
