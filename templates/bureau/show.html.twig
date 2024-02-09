@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bureau{% endblock %}
+
+{% block body %}
+    <h1>Bureau</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ bureau.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ bureau.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ bureau.prenom }}</td>
+            </tr>
+            <tr>
+                <th>EMail</th>
+                <td>{{ bureau.eMail }}</td>
+            </tr>
+            <tr>
+                <th>Annee</th>
+                <td>{{ bureau.annee }}</td>
+            </tr>
+            <tr>
+                <th>Pole</th>
+                <td>{{ bureau.pole }}</td>
+            </tr>
+            <tr>
+                <th>Linkedin</th>
+                <td>{{ bureau.linkedin }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ bureau.image }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_bureau_index') }}">back to list</a>
+
+    <a href="{{ path('app_bureau_edit', {'id': bureau.id}) }}">edit</a>
+
+    {{ include('bureau/_delete_form.html.twig') }}
+{% endblock %}

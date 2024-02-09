@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bureau index{% endblock %}
+
+
+
+{% block body %}
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon Site Web</title>
+        <link rel="stylesheet" href="{{ asset('styles/acceuil.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/bureau.css') }}">
+        <div class="navbar">
+            <div class="logo">
+                <img src="{{ asset('/image/amigo.jpg') }}" alt="Logo"> <!-- Remplacez par le chemin de votre logo -->
+            </div>
+            <h1 class="amigo">AMIGO</h1>
+            <ul>
+                <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                <li><a href="#">Miage</a></li>
+                <li><a href="{{ path('app_bureau_index') }}">Bureau</a></li>
+                <li><a href="#">Evennements</a></li>
+                <li><a href="#">Partenaire</a></li>
+                <li><a href="#">Nos offres</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Administrateur</a></li>
+            </ul>
+        </div>
+    </head>
+
+
+    <h1>Bureau index</h1>
+
+    <div class="bureau-container">
+        {% for bureau in bureaus %}
+            <div class="bureau-card {% if loop.index is odd %}left{% else %}right{% endif %}">
+                <img src="{{ asset('/image/IMG_1249.png') }}" alt="Photo de {{ bureau.prenom }} {{ bureau.nom }}" class="bureau-image">
+                <div class="bureau-info">
+                    <h2>{{ bureau.prenom }} {{ bureau.nom }}</h2>
+                    <p>{{ bureau.eMail }}</p>
+                    <p>{{ bureau.annee }}</p>
+                    <p>{{ bureau.pole }}</p>
+                    <a href="{{ bureau.linkedin }}" class="linkedin-btn">LinkedIn</a>
+                </div>
+            </div>
+        {% else %}
+            <p>No records found</p>
+        {% endfor %}
+    </div>
+
+{% endblock %}
